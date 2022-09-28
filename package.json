@@ -41,12 +41,12 @@
         "nerdtree.hideSidebarWhenOpenFile": {
           "type": "boolean",
           "default": true,
-          "description": "If this option is checked ✅, the sidebar will be hidden, when your open file from Explorer view with NerdTree key ⌨️ (t) and (Enter). Otherwise ❌, nothing will happend."
+          "description": "If this option is checked ✅, the sidebar will be hidden, after you open a file from the Explorer view with NERDTree key ⌨️ (t) or (Enter). Otherwise ❌, nothing will happend."
         },
         "nerdtree.alwaysShowSidebar": {
           "type": "boolean",
           "default": false,
-          "description": "If this option is checked ✅, sidebar always will be shown with you switch between editor and file explorer with NerdTree shortcut (ctrl + n). Otherwise ❌, sidebar will be toggled everytime you use NerdTree shortcut (ctrl + n)."
+          "description": "If this option is checked ✅, the sidebar will be shown everytime you switch between editor and file explorer with NERDTree shortcut ⌨️ (ctrl + n). Otherwise ❌, sidebar will be toggled instead"
         }
       }
     },
