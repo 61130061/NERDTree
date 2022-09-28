@@ -1,0 +1,138 @@
+{
+  "name": "nerdtree",
+  "displayName": "NERDTree",
+  "description": "⌨️ NERDTree for Visual Studio Code",
+  "version": "1.0.0",
+  "publisher": "61130061",
+  "keywords": [
+    "NERDTree",
+    "vim",
+    "vi",
+    "vscodevim"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/61130061/NERDTree.git"
+  },
+  "homepage": "https://github.com/61130061/NERDTree",
+  "engines": {
+    "vscode": "^1.71.0"
+  },
+  "categories": [
+    "Other",
+    "Keymaps"
+  ],
+  "activationEvents": [
+    "onCommand:nerdtree.unfocusSidebarOrClose",
+    "onCommand:nerdtree.focusFileView",
+    "onCommand:nerdtree.openFileNewWindow",
+    "onCommand:nerdtree.createFile",
+    "onCommand:nerdtree.moveFileToTrash",
+    "onCommand:nerdtree.copyFile",
+    "onCommand:nerdtree.pasteFile",
+    "onCommand:nerdtree.createFolder",
+    "onCommand:nerdtree.renameFile"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "configuration": {
+      "title": "NerdTree",
+      "properties": {
+        "nerdtree.hideSidebarWhenOpenFile": {
+          "type": "boolean",
+          "default": true,
+          "description": "If this option is checked ✅, the sidebar will be hidden, when your open file from Explorer view with NerdTree key ⌨️ (t) and (Enter). Otherwise ❌, nothing will happend."
+        },
+        "nerdtree.alwaysShowSidebar": {
+          "type": "boolean",
+          "default": false,
+          "description": "If this option is checked ✅, sidebar always will be shown with you switch between editor and file explorer with NerdTree shortcut (ctrl + n). Otherwise ❌, sidebar will be toggled everytime you use NerdTree shortcut (ctrl + n)."
+        }
+      }
+    },
+    "keybindings": [
+      {
+        "key": "ctrl+n",
+        "command": "nerdtree.unfocusSidebarOrClose",
+        "when": "sideBarVisible && filesExplorerFocus"
+      },
+      {
+        "key": "ctrl+n",
+        "command": "nerdtree.focusFileView",
+        "when": "sideBarVisible && !filesExplorerFocus"
+      },
+      {
+        "key": "ctrl+n",
+        "command": "nerdtree.focusFileView",
+        "when": "!sideBarVisible"
+      },
+      {
+        "key": "t",
+        "command": "nerdtree.openFileNewWindow",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsFolder && !inputFocus"
+      },
+      {
+        "key": "enter",
+        "command": "nerdtree.openFileNewWindow",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsFolder && !inputFocus"
+      },
+      {
+        "key": "m a",
+        "command": "nerdtree.createFile",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+      },
+      {
+        "key": "m d",
+        "command": "nerdtree.moveFileToTrash",
+        "when": "explorerResourceMoveableToTrash && explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+      },
+      {
+        "key": "m c",
+        "command": "nerdtree.copyFile",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
+      },
+      {
+        "key": "m v",
+        "command": "nerdtree.pasteFile",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+      },
+      {
+        "key": "m f",
+        "command": "nerdtree.createFolder",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+      },
+      {
+        "key": "m r",
+        "command": "nerdtree.renameFile",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "yarn run package",
+    "compile": "webpack",
+    "watch": "webpack --watch",
+    "package": "webpack --mode production --devtool hidden-source-map",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "yarn run compile-tests && yarn run compile && yarn run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.71.0",
+    "@types/glob": "^7.2.0",
+    "@types/mocha": "^9.1.1",
+    "@types/node": "16.x",
+    "@typescript-eslint/eslint-plugin": "^5.31.0",
+    "@typescript-eslint/parser": "^5.31.0",
+    "eslint": "^8.20.0",
+    "glob": "^8.0.3",
+    "mocha": "^10.0.0",
+    "typescript": "^4.7.4",
+    "ts-loader": "^9.3.1",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0",
+    "@vscode/test-electron": "^2.1.5"
+  }
+}
