@@ -1,71 +1,81 @@
-# nerdtree README
+# NERDTree VSCode
 
-This is the README for your extension "nerdtree". After writing up a brief description, we recommend including the following sections.
+This extension is [NERDTree](https://github.com/preservim/nerdtree) keybinding like for [Visual Studio Code](https://code.visualstudio.com).
 
-## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+## Installation
 
-For example if there is an image subfolder under your extension project workspace:
+1. You can install NERDTree for VSCode via Marketplace (coming soon...).
 
-\!\[feature X\]\(images/feature-x.png\)
+### Vim User
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+There are conflicts between NERDTree VSCode keybindings and other extension.
+To use NERDTree, we have to disable some keybinding from other extension first ⚠️.
+If you use any below extension, you can setup following the guide below.
 
-## Requirements
+ > If you find any conflict with other extension please let us know [here](https://github.com/61130061/NERDTree/issues).
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+#### VSCodeVim
+- Add this setting to your VSCode setting `setting.js`. 
+This setting will disable `Ctrl + N` from VSCodeVim extension.
 
-## Extension Settings
+```json
+{
+	...
+	"vim.handleKeys": {
+		"<C-n>": false,
+	}
+}
+```
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
 
-For example:
+## Usage
 
-This extension contributes the following settings:
+You can start using NERDTree after installation.
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+### Feature 
 
-## Known Issues
+We try to bring [NERDTree Vim](https://github.com/preservim/nerdtree) features to VSCode as much as possible.
+This is all the features that are available and coming soon in the future.
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+#### Guide
+- `CTRL + N` means shortcut (similar to normal shortcut).
+- `<LEADER> -> <COMMAND>` means press `<LEADER>` key first and then follow with `<COMMAND>` key
 
-## Release Notes
+| **Keybinding** | **on Editor** | **on File Explorer** | Note |
+|:---:|:---:|:---:|:---:|
+| `CTRL + N` | Open and focus on file explorer view. | Close explorer view and change focus to editor view. | If you want to keep file explorer view open all the time, you can change `nerdtree.hideSidebarWhenOpenFile` setting following [here](#configuration). |
+| `T` or `ENTER` | - | Open selected `file`. | You can hide File Explorer every time you open a file by changing `nerdtree.alwaysShowSidebar` setting following [here](#configuration). |
+| `M -> A` | - | Create new `file` at cursor position. | - |
+| `M -> F` | - | Create new `folder` at cursor position. | - |
+| `M -> D` | - | Move a `file` to trash. | - |
+| `M -> C` | - | Copy a `file`. | - |
+| `M -> V` | - | Paste a `file`. | - |
+| `M -> R` | - | Rename a `file`. | - |
 
-Users appreciate release notes as you update your extension.
 
-### 1.0.0
+## Setting
 
-Initial release of ...
+You can change all the settings from 
 
-### 1.0.1
+- On Windows/Linux - File > Preferences > Settings > Extensions > NERDTree
+- On macOS - Code > Preferences > Settings > Extensions > NERDTree
 
-Fixed issue #.
+or in the `setting.json` file as an example below.
 
-### 1.1.0
+```json
+{
+	...
+	"nerdtree.hideSidebarWhenOpenFile": false,
+	"nerdtree.alwaysShowSidebar": true,
+}
+```
 
-Added features X, Y, and Z.
+### Configuration
 
----
+These are all NERDTree settings that you can change.
 
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+| **Setting** | **Description** | **Type** | **Default** |
+|:---:|:---:|:---:|:---:|
+| nerdtree.hideSidebarWhenOpenFile | If this option is checked `true` ✅, the sidebar will be hidden, after you open a file from the Explorer view with `NERDTree` key ⌨️ `t` or `Enter`. Otherwise ❌, nothing will happend. | `boolean` | `true` |
+| nerdtree.alwaysShowSidebar | If this option is checked `true` ✅, the sidebar will be shown everytime you switch between editor and file explorer with `NERDTree` shortcut ⌨️ `CTRL + N`. Otherwise ❌, sidebar will be toggled instead.  | `boolean` | `false` |
