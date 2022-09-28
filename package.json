@@ -36,7 +36,7 @@
   "main": "./dist/extension.js",
   "contributes": {
     "configuration": {
-      "title": "NerdTree",
+      "title": "NERDTree",
       "properties": {
         "nerdtree.hideSidebarWhenOpenFile": {
           "type": "boolean",
