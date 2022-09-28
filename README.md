@@ -1,4 +1,4 @@
-# NERDTree VSCode
+<h1 align="center"><img src="https://raw.githubusercontent.com/61130061/NERDTree/master/docs/icon.png" height="128"><br>NERDTree VSCode</h1>
 
 This extension is [NERDTree](https://github.com/preservim/nerdtree) keybinding like for [Visual Studio Code](https://code.visualstudio.com).
 
