@@ -17,7 +17,7 @@ This extension is [NERDTree](https://github.com/preservim/nerdtree) keybinding l
 
 ## Installation
 
-1. You can install NERDTree for VSCode via Marketplace (coming soon...).
+1. You can install NERDTree for VSCode via [Marketplace](https://marketplace.visualstudio.com/items?itemName=Llam4u.nerdtree).
 
 ### Vim User
 
