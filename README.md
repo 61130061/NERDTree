@@ -2,6 +2,17 @@
 
 This extension is [NERDTree](https://github.com/preservim/nerdtree) keybinding like for [Visual Studio Code](https://code.visualstudio.com).
 
+<details>
+	<summary>🗄 <strong>Table of Contents</strong> (click to expand)</summary>
+
+- [Installation](#installation)
+	- [Vim User](#vim-user)
+- [Usage](#usage)
+- [Setting](#setting)
+	- [Configuration](#configuration)
+
+</details>
+
 ![Screen Shot](https://github.com/61130061/NERDTree/blob/master/docs/screen-rec.gif?raw=true)
 
 ## Installation

@@ -4,7 +4,7 @@
   "description": "⌨️ NERDTree for Visual Studio Code",
   "icon": "docs/icon.png",
   "version": "1.0.0",
-  "publisher": "61130061",
+  "publisher": "Llam4u",
   "keywords": [
     "NERDTree",
     "vim",
@@ -16,6 +16,9 @@
     "url": "https://github.com/61130061/NERDTree.git"
   },
   "homepage": "https://github.com/61130061/NERDTree",
+  "bugs": {
+    "url": "https://github.com/61130061/NERDTree/issues"
+  },
   "engines": {
     "vscode": "^1.71.0"
   },
