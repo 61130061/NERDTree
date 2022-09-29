@@ -2,6 +2,7 @@
 
 This extension is [NERDTree](https://github.com/preservim/nerdtree) keybinding like for [Visual Studio Code](https://code.visualstudio.com).
 
+![Screen Shot](https://raw.githubusercontent.com/61130061/NERDTree/master/docs/screen-rec.gif)
 
 ## Installation
 
