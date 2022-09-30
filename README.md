@@ -1,6 +1,7 @@
 <h1 align="center"><img src="https://raw.githubusercontent.com/61130061/NERDTree/master/docs/icon.png" height="128"><br>NERDTree VSCode</h1>
 
-<a href="https://marketplace.visualstudio.com/items?itemName=Llam4u.nerdtree"><img src="https://img.shields.io/badge/Visual%20Studio%20Marketplace-v1.0.0-blue.svg"/></a>
+<a href="https://marketplace.visualstudio.com/items?itemName=Llam4u.nerdtree"><img src="https://vsmarketplacebadge.apphb.com/version/Llam4u.NERDTree.svg"/></a>
+![Installs](https://vsmarketplacebadge.apphb.com/installs/Llam4u.NERDTree.svg)
 
 This extension is [NERDTree](https://github.com/preservim/nerdtree) keybinding like for [Visual Studio Code](https://code.visualstudio.com).
 
