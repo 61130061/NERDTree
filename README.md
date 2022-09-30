@@ -12,6 +12,7 @@ This extension is [NERDTree](https://github.com/preservim/nerdtree) keybinding l
 - [Usage](#usage)
 - [Setting](#setting)
 	- [Configuration](#configuration)
+- [Roadmap](https://github.com/61130061/NERDTree/blob/master/ROADMAP.md)
 
 </details>
 
@@ -50,6 +51,7 @@ You can start using NERDTree after installation.
 ### Feature 
 
 We try to bring [NERDTree Vim](https://github.com/preservim/nerdtree) features to VSCode as much as possible.
+You can read our roadmap [here](https://github.com/61130061/NERDTree/blob/master/ROADMAP.md).
 This is all the features that are available and coming soon in the future.
 
 #### Guide
