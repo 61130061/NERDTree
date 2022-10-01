@@ -2,7 +2,7 @@
 
 We try to bring [NERDTree Vim](https://github.com/preservim/nerdtree) features to VSCode as much as possible.
 
-✅🌟 = feature completed with with VS Code specific customization 
+✅🌟 = feature completed with VS Code specific customization 
 
 ✅ = feature completed
 
