@@ -15,10 +15,15 @@ export function activate(context: vscode.ExtensionContext) {
 		})
 	);
 
-	// Focus fille explorer view
+	// Close current editor and open selected file instead
+	// Release version: 1.1.0
 	context.subscriptions.push(
-		vscode.commands.registerCommand('nerdtree.focusFileView', () => {
-			vscode.commands.executeCommand('workbench.files.action.focusFilesExplorer');
+		vscode.commands.registerCommand('nerdtree.openFile', () => {
+			vscode.commands.executeCommand('workbench.action.closeActiveEditor');
+			vscode.commands.executeCommand('list.select');
+			if (vscode.workspace.getConfiguration().get('nerdtree.hideSidebarWhenOpenFile')) {
+				vscode.commands.executeCommand('workbench.action.toggleSidebarVisibility');
+			}
 		})
 	);
 
@@ -29,48 +34,6 @@ export function activate(context: vscode.ExtensionContext) {
 			if (vscode.workspace.getConfiguration().get('nerdtree.hideSidebarWhenOpenFile')) {
 				vscode.commands.executeCommand('workbench.action.toggleSidebarVisibility');
 			}
-		})
-	);
-
-	// Create new file
-	context.subscriptions.push(
-		vscode.commands.registerCommand('nerdtree.createFile', () => {
-			vscode.commands.executeCommand('workbench.files.action.createFileFromExplorer');
-		})
-	);
-
-	// Create new folder
-	context.subscriptions.push(
-		vscode.commands.registerCommand('nerdtree.createFolder', () => {
-			vscode.commands.executeCommand('workbench.files.action.createFolderFromExplorer');
-		})
-	);
-
-	// Move focused file to trash 
-	context.subscriptions.push(
-		vscode.commands.registerCommand('nerdtree.moveFileToTrash', () => {
-			vscode.commands.executeCommand('moveFileToTrash');
-		})
-	);
-
-	// Copy focused file 
-	context.subscriptions.push(
-		vscode.commands.registerCommand('nerdtree.copyFile', () => {
-			vscode.commands.executeCommand('filesExplorer.copy');
-		})
-	);
-
-	// Paste focused file 
-	context.subscriptions.push(
-		vscode.commands.registerCommand('nerdtree.pasteFile', () => {
-			vscode.commands.executeCommand('filesExplorer.paste');
-		})
-	);
-
-	// Paste focused file 
-	context.subscriptions.push(
-		vscode.commands.registerCommand('nerdtree.renameFile', () => {
-			vscode.commands.executeCommand('renameFile');
 		})
 	);
 }

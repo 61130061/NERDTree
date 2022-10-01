@@ -3,7 +3,7 @@
   "displayName": "NERDTree",
   "description": "⌨️ NERDTree for Visual Studio Code",
   "icon": "docs/icon.png",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "publisher": "Llam4u",
   "keywords": [
     "NERDTree",
@@ -28,14 +28,8 @@
   ],
   "activationEvents": [
     "onCommand:nerdtree.unfocusSidebarOrClose",
-    "onCommand:nerdtree.focusFileView",
-    "onCommand:nerdtree.openFileNewWindow",
-    "onCommand:nerdtree.createFile",
-    "onCommand:nerdtree.moveFileToTrash",
-    "onCommand:nerdtree.copyFile",
-    "onCommand:nerdtree.pasteFile",
-    "onCommand:nerdtree.createFolder",
-    "onCommand:nerdtree.renameFile"
+    "onCommand:nerdtree.openFile",
+    "onCommand:nerdtree.openFileNewWindow"
   ],
   "main": "./dist/extension.js",
   "contributes": {
@@ -62,12 +56,12 @@
       },
       {
         "key": "ctrl+n",
-        "command": "nerdtree.focusFileView",
+        "command": "workbench.files.action.focusFilesExplorer",
         "when": "sideBarVisible && !filesExplorerFocus"
       },
       {
         "key": "ctrl+n",
-        "command": "nerdtree.focusFileView",
+        "command": "workbench.files.action.focusFilesExplorer",
         "when": "!sideBarVisible"
       },
       {
@@ -77,37 +71,62 @@
       },
       {
         "key": "enter",
-        "command": "nerdtree.openFileNewWindow",
+        "command": "nerdtree.openFile",
         "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsFolder && !inputFocus"
       },
       {
+        "key": "enter",
+        "command": "list.select",
+        "when": "explorerViewletVisible && filesExplorerFocus && explorerResourceIsFolder && !inputFocus"
+      },
+      {
+        "key": "h",
+        "command": "list.collapse",
+        "when": "listFocus && !inputFocus"
+      },
+      {
+        "key": "j",
+        "command": "list.focusDown",
+        "when": "listFocus && !inputFocus"
+      },
+      {
+        "key": "k",
+        "command": "list.focusUp",
+        "when": "listFocus && !inputFocus"
+      },
+      {
+        "key": "l",
+        "command": "list.select",
+        "when": "listFocus && !inputFocus"
+      },
+      {
         "key": "m a",
-        "command": "nerdtree.createFile",
+        "command": "workbench.files.action.createFileFromExplorer",
         "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
       },
       {
         "key": "m d",
-        "command": "nerdtree.moveFileToTrash",
+        "command": "moveFileToTrash",
         "when": "explorerResourceMoveableToTrash && explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
       },
       {
         "key": "m c",
-        "command": "nerdtree.copyFile",
+        "command": "filesExplorer.copy",
         "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
       },
       {
         "key": "m v",
-        "command": "nerdtree.pasteFile",
+        "command": "filesExplorer.paste",
         "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
       },
       {
         "key": "m f",
-        "command": "nerdtree.createFolder",
+        "command": "workbench.files.action.createFolderFromExplorer",
         "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
       },
       {
         "key": "m r",
-        "command": "nerdtree.renameFile",
+        "command": "renameFile",
         "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
       }
     ]

@@ -18,7 +18,7 @@ We try to bring [NERDTree Vim](https://github.com/preservim/nerdtree) features t
 | **Status** | **Feature** |
 |:---:|:---:|
 | ✅🌟 | Open/Close **File Explorer** view |
-| ⚠️ | walk through **File Explorer** |
+| ✅️ | walk through **File Explorer** |
 | ✅ | CRUD file keybindings |
 | 🦙‍ | Extension conflict alert |
 | 🦙‍ | Customizable keybindings |
