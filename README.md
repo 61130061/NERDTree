@@ -61,7 +61,7 @@ This is all the features that are available and coming soon in the future.
 
 | **Keybinding** | **on Editor** | **on File Explorer** | Note |
 |:---:|:---:|:---:|:---:|
-| `CTRL + N` | Open and focus on file explorer view. | Close explorer view and change focus to editor view. | If you want to keep file explorer view open all the time, you can change `nerdtree.hideSidebarWhenOpenFile` setting following [here](#configuration). |
+| `CTRL + N` | Open and focus on file explorer view. (vim NORMAL mode only) | Close explorer view and change focus to editor view. | If you want to keep file explorer view open all the time, you can change `nerdtree.hideSidebarWhenOpenFile` setting following [here](#configuration). |
 | `J`, `K`, `H` and `L` | - | Moving around with VIM keybinding | `J` = `DOWN`, `K` = `UP`, `H` = `LEFT`, `L` = `RIGHT` |
 | `Enter` | - | Open selected `file` in current active editor or Expand folder tree | You can hide File Explorer every time you open a file by changing `nerdtree.alwaysShowSidebar` setting following [here](#configuration). |
 | `T` | - | Open selected `file` in a new tab | You can hide File Explorer every time you open a file by changing `nerdtree.alwaysShowSidebar` setting following [here](#configuration). |
